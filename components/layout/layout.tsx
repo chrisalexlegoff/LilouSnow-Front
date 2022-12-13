@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
+import Nav from "../nav/nav"
 
-// Typescrypt
 /**---
  * @author https://christophe-le-goff.com
  */
@@ -9,9 +9,10 @@ interface LayoutProps {
   // other props...
 }
 
-const Layout = ({ children, ...props }: LayoutProps): JSX.Element => {
+const Layout = ({ children }: LayoutProps) => {
   return (
     <>
+      <Nav />
       <main className="select-none">{children}</main>
     </>
   )
