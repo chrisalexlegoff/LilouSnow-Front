@@ -22,6 +22,9 @@ module.exports = {
     extend: {
       colors: {
         "encre-de-chine": "var(--encre-de-chine)",
+        dore: "var(--dore)",
+        gris: "var(--gris)",
+        blanc: "var(--blanc)",
       },
     },
   },
