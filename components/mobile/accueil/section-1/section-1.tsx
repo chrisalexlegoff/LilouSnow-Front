@@ -41,6 +41,7 @@ const SectionUne = ({ homeMobile }: sectionUneProps) => {
             className="rotate absolute z-0"
             image={homeMobile.imagesSun.data[1].attributes}
             loading="eager"
+            priority={true}
           />
           <div className="z-10 h-[300px] flex flex-col justify-evenly">
             <GetImage

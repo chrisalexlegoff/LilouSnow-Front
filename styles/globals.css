@@ -8,6 +8,9 @@
 
 :root {
   --encre-de-chine: #000707;
+  --dore: #0ea7c9;
+  --gris: #efefef;
+  --blanc: #ffffff;
 }
 
 @layer base {
