@@ -2,4 +2,148 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./reset.css";
 @import "./pages";
+@import "./nav/";
+
+:root {
+  --encre-de-chine: #000707;
+}
+
+@layer base {
+  @font-face {
+    font-family: "Myriad Pro Condensed";
+    src: url("/font/MyriadProCondensed.eot"); /* IE9*/
+    src: url("/font/MyriadProCondensed.eot?#iefix") format("embedded-opentype"),
+      /* IE6-IE8 */ url("/font/MyriadProCondensed.woff2") format("woff2"),
+      /* chrome、firefox */ url("/font/MyriadProCondensed.woff") format("woff"),
+      /* chrome、firefox */ url("/font/MyriadProCondensed.ttf")
+        format("truetype"),
+      /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+        url("/font/MyriadProCondensed.svg#Myriad Pro Condensed") format("svg"); /* iOS 4.1- */
+  }
+
+  @layer utilities {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+
+  html {
+    --scroll-behavior: smooth !important;
+    scroll-behavior: smooth !important;
+  }
+
+  body {
+    @apply no-scrollbar;
+    font-family: "Myriad Pro Condensed", sans-serif;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  /* DEFAULT STYLES - MOBILE-FIRST */
+  h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.625rem;
+    line-height: 2.313rem;
+    letter-spacing: 0.08em;
+    color: var(--encre-de-chine);
+  }
+  h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    letter-spacing: 0.02em;
+    color: var(--encre-de-chine);
+  }
+  .h2-accueil-section-1 > h2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.813rem;
+    letter-spacing: 0.02em;
+    color: var(--encre-de-chine);
+  }
+  .h3-accueil-section-1 > h3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.063rem;
+    letter-spacing: 0.02em;
+    color: var(--encre-de-chine);
+  }
+  h3 /* MB */ {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.688rem;
+    line-height: 2.125rem;
+    color: var(--encre-de-chine);
+  }
+  h4 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.688rem;
+    line-height: 2.125rem;
+    letter-spacing: 0.02em;
+    color: var(--encre-de-chine);
+  }
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.438rem;
+    letter-spacing: 0.02em;
+    color: var(--encre-de-chine);
+  }
+
+  .texte-button {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.438rem;
+    line-height: 1.813rem;
+    letter-spacing: 0.02em;
+    color: var(--encre-de-chine);
+  }
+
+  .texte-light {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.313rem;
+    line-height: 1.813rem;
+    letter-spacing: 0.02em;
+    color: var(--encre-de-chine);
+  }
+
+  /* MEDIA QUERIES!! */
+  /* min 768px == md */
+  @media only screen and (min-width: 768px) {
+    h1 {
+      font-size: 4.563rem;
+      line-height: 4.375rem;
+    }
+    h2 {
+      font-size: 2.875rem;
+      line-height: 3.438rem;
+    }
+    h3 {
+      font-size: 2.25rem;
+      color: var(--encre-de-chine);
+      letter-spacing: 0.02em;
+    }
+    p {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      letter-spacing: 0.05em;
+    }
+  }
+}
