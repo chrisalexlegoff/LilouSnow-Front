@@ -19,7 +19,11 @@ module.exports = {
       full: "100%",
       screen: "calc(var(--vh) * 100)",
     }),
-    extend: {},
+    extend: {
+      colors: {
+        "encre-de-chine": "var(--encre-de-chine)",
+      },
+    },
   },
   plugins: [],
 }
