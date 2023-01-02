@@ -1,7 +1,3 @@
-.logo-white svg > path {
+.logo-white svg path {
   fill: black !important;
-}
-
-.logo-white button > span {
-  color: black !important;
 }
