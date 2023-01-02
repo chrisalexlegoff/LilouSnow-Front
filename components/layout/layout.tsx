@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react"
 import Nav from "../nav/nav"
+import Reseaux from "../widgets/reseaux/reseaux"
 
 /**---
  * @author https://christophe-le-goff.com
@@ -14,6 +15,7 @@ const Layout = ({ children }: LayoutProps) => {
     <>
       <Nav />
       <main className="select-none">{children}</main>
+      <Reseaux />
     </>
   )
 }

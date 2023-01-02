@@ -5,6 +5,7 @@
 @import "./reset.css";
 @import "./pages";
 @import "./nav/";
+@import "./reseaux/";
 
 :root {
   --encre-de-chine: #000707;

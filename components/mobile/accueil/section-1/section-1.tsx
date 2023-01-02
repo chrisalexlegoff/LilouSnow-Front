@@ -13,13 +13,23 @@ const SectionUne = ({ homeMobile }: sectionUneProps) => {
       gsap.fromTo(
         ".rotate",
         {
-          scale: 0.5,
-          rotate: 0,
+          scale: 0.8,
+          rotate: -120,
         },
         {
           scale: 1,
-          rotate: 360,
-          duration: 5,
+          rotate: 0,
+          duration: 3,
+        }
+      )
+      gsap.fromTo(
+        ".text",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 6,
         }
       )
     }
@@ -33,24 +43,24 @@ const SectionUne = ({ homeMobile }: sectionUneProps) => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="h-screen w-screen py-24"
+      className="h-screen w-screen"
     >
-      <div className="h-full w-full max-w-md mx-auto flex flex-col">
-        <div className="text-center h-full w-3/4 flex flex-col items-center justify-center mx-auto">
+      <div className="h-[92vh] w-full max-w-md mx-auto flex flex-col justify-around pt-32">
+        <div className="text-center w-3/4 flex flex-col items-center justify-center mx-auto">
           <GetImage
             className="rotate absolute z-0"
             image={homeMobile.imagesSun.data[1].attributes}
             loading="eager"
             priority={true}
           />
-          <div className="z-10 h-[300px] flex flex-col justify-evenly">
+          <div className="text opacity-0 z-10 h-[300px] flex flex-col justify-center">
             <GetImage
               className="w-fit mx-auto"
               image={homeMobile.imagesSun.data[2].attributes}
               loading="eager"
             />
             <div
-              className=""
+              className="mt-3 mb-1"
               dangerouslySetInnerHTML={{ __html: homeMobile.h1Sun }}
             ></div>
             <div
@@ -58,7 +68,7 @@ const SectionUne = ({ homeMobile }: sectionUneProps) => {
               dangerouslySetInnerHTML={{ __html: homeMobile.h2Sun }}
             ></div>
             <div
-              className="h3-accueil-section-1"
+              className="h3-accueil-section-1 mt-3"
               dangerouslySetInnerHTML={{ __html: homeMobile.h3Sun }}
             ></div>
           </div>
