@@ -1,11 +1,12 @@
-import React from "react"
-import Layout from "../components/layout/layout"
-import SectionUne from "../components/mobile/accueil/section-1/section-1"
-import { API } from "../lib/constants/api"
-import { fetchGetter } from "../lib/fetch/get"
+import React from "react";
+import Layout from "../components/layout/layout";
+import SectionUne from "../components/mobile/accueil/section-1/section-1";
+import SectionDeux from "../components/mobile/accueil/section-1/section-2";
+import { API } from "../lib/constants/api";
+import { fetchGetter } from "../lib/fetch/get";
 
 interface accueilProps {
-  homeMobile: any
+  homeMobile: any;
 }
 
 const Accueil = ({ homeMobile }: accueilProps): JSX.Element => {
@@ -13,7 +14,8 @@ const Accueil = ({ homeMobile }: accueilProps): JSX.Element => {
     <Layout>
       <div className="md:hidden">
         {/* Section une */}
-        <SectionUne homeMobile={homeMobile} />
+        <SectionUne homeMobile={homeMobile} logoWhite={false} />
+        <SectionDeux homeMobile={homeMobile} logoWhite={false} />
         <div className="md:hidden">
           <section id="section-2" className="white flex h-[700px] bg-[white]">
             <h1>section 2</h1>
@@ -33,17 +35,17 @@ const Accueil = ({ homeMobile }: accueilProps): JSX.Element => {
         </div>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
 export async function getStaticProps() {
-  const homeMobile = await fetchGetter({ path: API.HOME_MOBILE })
+  const homeMobile = await fetchGetter({ path: API.HOME_MOBILE });
 
   return {
     props: {
       homeMobile: homeMobile.data.attributes,
     },
-  }
+  };
 }
 
-export default Accueil
+export default Accueil;

@@ -54,13 +54,31 @@
   }
 
   /* DEFAULT STYLES - MOBILE-FIRST */
+  .white h1,
+  .white h2,
+  .white h3,
+  .white h4,
+  .white p,
+  .white .texte-light,
+  .black .h1-accueil-section-1 h1 {
+    color: var(--encre-de-chine);
+  }
+
+  .black h1,
+  .black h2,
+  .black h3,
+  .black h4,
+  .black p,
+  .black .texte-light {
+    color: var(--blanc);
+  }
+
   h1 {
     font-style: normal;
     font-weight: 400;
     font-size: 2.625rem;
     line-height: 2.313rem;
     letter-spacing: 0.08em;
-    color: var(--encre-de-chine);
   }
   h2 {
     font-style: normal;
@@ -68,7 +86,6 @@
     font-size: 1.875rem;
     line-height: 2.25rem;
     letter-spacing: 0.02em;
-    color: var(--encre-de-chine);
   }
   .h2-accueil-section-1 > h2 {
     font-style: normal;
@@ -91,7 +108,6 @@
     font-weight: 400;
     font-size: 1.688rem;
     line-height: 2.125rem;
-    color: var(--encre-de-chine);
   }
   h4 {
     font-style: normal;
@@ -99,7 +115,6 @@
     font-size: 1.688rem;
     line-height: 2.125rem;
     letter-spacing: 0.02em;
-    color: var(--encre-de-chine);
   }
   p {
     font-style: normal;
@@ -107,7 +122,6 @@
     font-size: 1rem;
     line-height: 1.438rem;
     letter-spacing: 0.02em;
-    color: var(--encre-de-chine);
   }
 
   .texte-button {
@@ -116,7 +130,6 @@
     font-size: 1.438rem;
     line-height: 1.813rem;
     letter-spacing: 0.02em;
-    color: var(--encre-de-chine);
   }
 
   .texte-light {
@@ -125,7 +138,6 @@
     font-size: 1.313rem;
     line-height: 1.813rem;
     letter-spacing: 0.02em;
-    color: var(--encre-de-chine);
   }
 
   /* MEDIA QUERIES!! */
@@ -141,7 +153,6 @@
     }
     h3 {
       font-size: 2.25rem;
-      color: var(--encre-de-chine);
       letter-spacing: 0.02em;
     }
     p {
