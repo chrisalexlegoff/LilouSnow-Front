@@ -4,14 +4,11 @@ import SectionUne from "../components/mobile/accueil/section-1/section-1";
 import SectionDeux from "../components/mobile/accueil/section-1/section-2";
 import { API } from "../lib/constants/api";
 import { fetchGetter } from "../lib/fetch/get";
+import { accueilProps } from "../lib/interfaces/interfaces";
 
-interface accueilProps {
-  homeMobile: any;
-}
-
-const Accueil = ({ homeMobile }: accueilProps): JSX.Element => {
+const Accueil = ({ homeMobile, seo }: accueilProps): JSX.Element => {
   return (
-    <Layout>
+    <Layout seo={seo}>
       <div className="md:hidden">
         {/* Section une */}
         <SectionUne homeMobile={homeMobile} logoWhite={false} />
@@ -44,6 +41,7 @@ export async function getStaticProps() {
   return {
     props: {
       homeMobile: homeMobile.data.attributes,
+      seo: homeMobile.data.attributes.seo,
     },
   };
 }

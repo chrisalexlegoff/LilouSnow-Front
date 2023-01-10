@@ -1,8 +1,8 @@
 // Appel data back (Methode 'GET' par defaut)
 interface fetchGetterProps {
-  path: string
-  params?: any
-  config?: {}
+  path: string;
+  params?: any;
+  config?: {};
 }
 /**
  *
@@ -15,21 +15,21 @@ export const fetchGetter = async ({
   params = null,
   config,
 }: fetchGetterProps) => {
-  let url
-  let populate = "populate=*"
+  let url;
+  let populate = "populate=deep";
   if (params !== null) {
-    url = `${process.env.NEXT_PUBLIC_API_URL}${path}?${populate}&${params}`
+    url = `${process.env.NEXT_PUBLIC_API_URL}${path}?${populate}&${params}`;
   } else {
-    url = `${process.env.NEXT_PUBLIC_API_URL}${path}?${populate}`
+    url = `${process.env.NEXT_PUBLIC_API_URL}${path}?${populate}`;
   }
 
   const data = await fetch(`${url}`, config)
     .then((response) => {
       if (!response.ok) {
-        throw Error(response.statusText)
+        throw Error(response.statusText);
       }
-      return response.json()
+      return response.json();
     })
-    .catch((error) => console.warn("ERROR", error))
-  return await data
-}
+    .catch((error) => console.warn("ERROR", error));
+  return await data;
+};
