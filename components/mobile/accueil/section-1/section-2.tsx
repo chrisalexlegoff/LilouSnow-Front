@@ -2,39 +2,9 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import GetImage from "../../../../lib/fetch/get-images";
 import gsap from "gsap";
+import { accueilProps } from "../../../../lib/interfaces/interfaces";
 
-interface sectionDeuxProps {
-  homeMobile: any;
-  logoWhite: boolean;
-}
-
-const SectionDeux = ({ homeMobile, logoWhite }: sectionDeuxProps) => {
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     gsap.fromTo(
-  //       ".rotate",
-  //       {
-  //         scale: 0.8,
-  //         rotate: -120,
-  //       },
-  //       {
-  //         scale: 1,
-  //         rotate: 0,
-  //         duration: 3,
-  //       }
-  //     )
-  //     gsap.fromTo(
-  //       ".text",
-  //       {
-  //         opacity: 0,
-  //       },
-  //       {
-  //         opacity: 1,
-  //         duration: 6,
-  //       }
-  //     )
-  //   }
-  // }, [])
+const SectionDeux = ({ homeMobile, logoWhite }: accueilProps) => {
   return (
     <section
       id="section-2"

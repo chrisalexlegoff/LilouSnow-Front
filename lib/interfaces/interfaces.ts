@@ -18,11 +18,36 @@ interface homeMobileProps {
   h3Sun: string;
   h2Sdeux: string;
   paragrapheSdeux: string;
-  imagesSun: {};
-  imagesSdeux: {};
+  imagesSun: any;
+  imagesSdeux: any;
+  buttonSdeux: string;
 }
 
 export interface accueilProps {
   homeMobile: homeMobileProps;
   seo: seoProps["seo"];
+  logoWhite: boolean;
+}
+
+export interface maintenanceProps {
+  maintenanceMobile?: maintenanceMobileProps;
+  maintenanceDesktop?: maintenanceDesktopProps;
+}
+
+export interface maintenanceMobileProps {
+  images: any;
+  h1Maintenance: string;
+  h2Maintenance: string;
+  h3Maintenance: string;
+  h4Maintenance: string;
+}
+export interface maintenanceDesktopProps {
+  images: any;
+  h1Maintenance: string;
+  h2Maintenance: string;
+  h3Maintenance: string;
+  h4Maintenance: string;
+  titreReseau1: string;
+  titreReseau2: string;
+  paragraphe1Maintenance: string;
 }

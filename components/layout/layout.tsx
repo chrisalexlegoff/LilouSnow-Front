@@ -19,7 +19,12 @@ const Layout = ({ children, seo }: LayoutProps) => {
       <Seo seo={seo} />
       <Nav />
       <main className="select-none">{children}</main>
-      <Reseaux />
+      <Reseaux
+        slug={["facebook", "messenger", "instagram", "mail"]}
+        classname={
+          "md:hidden fixed bottom-0 flex w-full justify-around items-center h-[8vh] bg-blanc opacity-80 z-10"
+        }
+      />
     </>
   );
 };
