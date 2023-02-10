@@ -11,8 +11,8 @@ const Accueil = ({ homeMobile, seo }: accueilProps): JSX.Element => {
     <Layout seo={seo}>
       <div className="md:hidden">
         {/* Section une */}
-        <SectionUne homeMobile={homeMobile} logoWhite={false} />
-        <SectionDeux homeMobile={homeMobile} logoWhite={false} />
+        <SectionUne seo={seo} homeMobile={homeMobile} logoWhite={false} />
+        <SectionDeux seo={seo} homeMobile={homeMobile} logoWhite={false} />
         <div className="md:hidden">
           <section id="section-2" className="white flex h-[700px] bg-[white]">
             <h1>section 2</h1>

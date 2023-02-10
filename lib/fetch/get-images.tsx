@@ -5,6 +5,7 @@ interface imageProps {
   image: any;
   loading?: any;
   height?: string;
+  width?: string;
   className?: string;
   priority?: boolean;
   fill?: boolean;
@@ -14,6 +15,7 @@ const GetImage = ({
   image,
   loading = "lazy",
   height = "",
+  width = "",
   className,
   priority = false,
   fill = false,
@@ -24,7 +26,7 @@ const GetImage = ({
         key={image.id}
         alt={image.alternativeText}
         src={process.env.NEXT_PUBLIC_URL + image.url}
-        width={!fill && (height != "" ? height : image.width)}
+        width={!fill && (width != "" ? width : image.width)}
         height={!fill && (height != "" ? height : image.height)}
         loading={loading}
         priority={priority}

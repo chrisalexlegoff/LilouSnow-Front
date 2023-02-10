@@ -2,13 +2,9 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import GetImage from "../../../../lib/fetch/get-images";
 import gsap from "gsap";
+import { accueilProps } from "../../../../lib/interfaces/interfaces";
 
-interface sectionUneProps {
-  homeMobile: any;
-  logoWhite: boolean;
-}
-
-const SectionUne = ({ homeMobile, logoWhite }: sectionUneProps) => {
+const SectionUne = ({ homeMobile, logoWhite }: accueilProps) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       gsap.fromTo(
@@ -44,7 +40,7 @@ const SectionUne = ({ homeMobile, logoWhite }: sectionUneProps) => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className={`h-screen w-screen ${logoWhite ? "white" : "black"}`}
+      className={`min-h-screen w-screen ${logoWhite ? "white" : "black"}`}
     >
       <div className="min-h-[92vh] w-full max-w-md mx-auto flex flex-col justify-around pt-32">
         <div className="text-center w-3/4 flex flex-col items-center justify-center mx-auto">
