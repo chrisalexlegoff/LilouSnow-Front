@@ -8,7 +8,7 @@ import { accueilProps } from "../lib/interfaces/interfaces";
 
 const Accueil = ({ homeMobile, seo }: accueilProps): JSX.Element => {
   return (
-    <Layout seo={seo}>
+    <Layout nav seo={seo}>
       <div className="md:hidden">
         {/* Section une */}
         <SectionUne seo={seo} homeMobile={homeMobile} logoWhite={false} />

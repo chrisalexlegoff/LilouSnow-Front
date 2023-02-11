@@ -10,14 +10,15 @@ import Reseaux from "../widgets/reseaux/reseaux";
 export interface LayoutProps {
   children: ReactNode;
   seo: seoProps["seo"];
+  nav: boolean;
   // other props...
 }
 
-const Layout = ({ children, seo }: LayoutProps) => {
+const Layout = ({ children, seo, nav }: LayoutProps) => {
   return (
     <>
       <Seo seo={seo} />
-      <Nav />
+      {nav && <Nav />}
       <main className="select-none">{children}</main>
       <Reseaux
         slug={["facebook", "messenger", "instagram", "mail"]}

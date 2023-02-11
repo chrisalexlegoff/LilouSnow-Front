@@ -1,32 +1,34 @@
-import Head from "next/head.js";
-import { useRouter } from "next/router.js";
-import { useEffect } from "react";
 import MaintenanceComponentDesktop from "../components/desktop/maintenance/maintenance";
+import Layout from "../components/layout/layout";
 import MaintenanceComponentMobile from "../components/mobile/maintenance/maintenance";
 import { API } from "../lib/constants/api";
 import { fetchGetter } from "../lib/fetch/get";
 import { maintenanceProps } from "../lib/interfaces/interfaces";
 
 const Maintenance = ({
+  seo,
   maintenanceMobile,
   maintenanceDesktop,
 }: maintenanceProps): JSX.Element => {
-  const router = useRouter();
-  useEffect(() => {
-    router.push("/maintenance", "je-reviens-tres-vite");
-  }, []);
+  // const router = useRouter();
+  // useEffect(() => {
+  //   router.push("/maintenance", "je-reviens-tres-vite");
+  // }, []);
   return (
-    <>
-      <Head>
-        <title>Lilou Snow | revient bientôt ...</title>
-      </Head>
+    <Layout nav={false} seo={seo}>
       <div className="md:hidden">
-        <MaintenanceComponentMobile maintenanceMobile={maintenanceMobile} />
+        <MaintenanceComponentMobile
+          seo={seo}
+          maintenanceMobile={maintenanceMobile}
+        />
       </div>
       <div className="hidden md:block">
-        <MaintenanceComponentDesktop maintenanceDesktop={maintenanceDesktop} />
+        <MaintenanceComponentDesktop
+          seo={seo}
+          maintenanceDesktop={maintenanceDesktop}
+        />
       </div>
-    </>
+    </Layout>
   );
 };
 
@@ -40,6 +42,7 @@ export async function getStaticProps() {
     props: {
       maintenanceMobile: maintenanceMobile.data.attributes,
       maintenanceDesktop: maintenanceDesktop.data.attributes,
+      seo: maintenanceDesktop.data.attributes.seo,
     },
   };
 }
