@@ -30,6 +30,7 @@ export interface accueilProps {
 }
 
 export interface maintenanceProps {
+  seo: seoProps["seo"];
   maintenanceMobile?: maintenanceMobileProps;
   maintenanceDesktop?: maintenanceDesktopProps;
 }

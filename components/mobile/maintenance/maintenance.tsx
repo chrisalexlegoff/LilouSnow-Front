@@ -63,7 +63,7 @@ const MaintenanceComponentMobile = ({
           className="min-h-[92vh] w-full mx-auto flex flex-col items-center justify-center text-center px-4"
         >
           <div className="flex flex-col justify-center items-center">
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center mb-[3vh]">
               <GetImage
                 className="circle"
                 image={maintenanceMobile?.images.data[1].attributes}
@@ -77,7 +77,7 @@ const MaintenanceComponentMobile = ({
                 priority={true}
               />
             </div>
-            <div className="appear mb-10">
+            <div className="appear mb-[3vh]">
               <div
                 className="h1-maintenance"
                 dangerouslySetInnerHTML={{
@@ -97,13 +97,13 @@ const MaintenanceComponentMobile = ({
             </div>
           </div>
           <div
-            className="h3-maintenance appear mb-10"
+            className="h3-maintenance appear mb-[3vh]"
             dangerouslySetInnerHTML={{
               __html: maintenanceMobile ? maintenanceMobile.h3Maintenance : "",
             }}
           />
           <div
-            className="h4-maintenance appear mb-10"
+            className="h4-maintenance appear mb-[3vh]"
             dangerouslySetInnerHTML={{
               __html: maintenanceMobile ? maintenanceMobile.h4Maintenance : "",
             }}
